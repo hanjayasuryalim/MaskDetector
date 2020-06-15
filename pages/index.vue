@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">Mask Detection Application</h1>
+      <h1 class="title">Mask Detector Application</h1>
       <hr />
       <br />
       <Tensorflow />
