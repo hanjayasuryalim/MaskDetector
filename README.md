@@ -22,8 +22,15 @@ $ npm run generate
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 # Tensorflow JS
+
 npm install --save @tensorflow/tfjs
+
 # nuxt.config.js
+
 build :{
-    vendor: ['@tensorflow/tjfs]
+vendor: ['@tensorflow/tjfs]
 }
+
+# VueJS noty
+
+npm install vuejs-noty
