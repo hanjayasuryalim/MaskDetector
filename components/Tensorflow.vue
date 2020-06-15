@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Modal for camera -->
-    <modal name="camera">
+    <modal name="cameraModal">
       Hello
     </modal>
 
@@ -161,7 +161,7 @@ export default {
       this.notReady = true
     },
     openModal() {
-      this.$modal.show('camera')
+      this.$modal.show('cameraModal')
     }
   }
 }
