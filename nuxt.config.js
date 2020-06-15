@@ -27,7 +27,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/vuejs-noty.js', ssr: false }],
+  plugins: [
+    { src: '~/plugins/vuejs-noty.js', ssr: false },
+    { src: '~/plugins/vue-js-modal.js', ssr: false }
+  ],
   /*
    ** Nuxt.js dev-modules
    */

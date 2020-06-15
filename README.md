@@ -34,3 +34,4 @@ vendor: ['@tensorflow/tjfs]
 # VueJS noty
 
 npm install vuejs-noty
+npm install vue-js-modal
