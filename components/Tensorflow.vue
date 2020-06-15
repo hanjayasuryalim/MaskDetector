@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="alert alert-dark" role="alert">Input data</div>
+    <h2>Input Data</h2>
+    <br />
+
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
@@ -13,26 +15,17 @@
           aria-describedby="inputGroupFileAddon01"
           @change="readURL"
         />
-        <label class="custom-file-label" for="inputGroupFile01"
-          >Choose file</label
-        >
+        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
       </div>
     </div>
-    <img
-      id="uploadedImage"
-      alt="img"
-      src="../assets/MASK detector.png"
-      class="myImage"
-    />
+    <img id="uploadedImage" alt="img" src="../assets/MASK detector.png" class="myImage" />
     <br />
     <br />
     <br />
-    <div class="alert alert-primary" role="alert">Prediction</div>
+    <h2>Prediction</h2>
     <p id="prediction">This is prediction</p>
 
-    <button class="btn btn-primary" :disabled="notReady" @click="predict">
-      Predict
-    </button>
+    <button class="btn btn-primary" :disabled="notReady" @click="predict">Predict</button>
   </div>
 </template>
 
@@ -141,17 +134,32 @@ export default {
       )
 
       // Return the best probability label
-      document.querySelector(
-        '#prediction'
-      ).innerText = `${labelName} (${Math.floor(probability * 100)}%)`
+      document.querySelector('#prediction').innerText = `${labelName}`
     }
   }
 }
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
 .myImage {
   width: 50%;
   border: 2px solid lightblue;
+}
+
+#prediction {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.2rem;
+}
+
+h2 {
+  border-left: 10px solid #dc0000;
+  text-align: left;
+  padding: 10px;
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 1.3rem;
+  background-color: #dcaaaa;
 }
 </style>

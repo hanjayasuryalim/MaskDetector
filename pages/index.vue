@@ -2,13 +2,11 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">
-        Mask Detection Application
-      </h1>
-      <br>
-       <Tensorflow />
+      <h1 class="title">Mask Detection Application</h1>
+      <hr />
+      <br />
+      <Tensorflow />
     </div>
- 
   </div>
 </template>
 
@@ -56,9 +54,9 @@ export default {
   padding-top: 15px;
 }
 
-@media screen and (max-width:640px ) {
+@media screen and (max-width: 640px) {
   .title {
-    font-size:40px;
+    font-size: 40px;
   }
 }
 </style>
