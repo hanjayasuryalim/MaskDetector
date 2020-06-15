@@ -27,7 +27,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: '~/plugins/vuejs-noty.js', ssr: false }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -42,7 +42,7 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
+    '@nuxtjs/axios'
   ],
   /*
    ** Axios module configuration
@@ -62,7 +62,5 @@ export default {
 }
 
 module.exports = {
-  serverMiddleware: [
-    { path: '/api', handler: '~/api/index.js'}
-  ]
+  serverMiddleware: [{ path: '/api', handler: '~/api/index.js' }]
 }
