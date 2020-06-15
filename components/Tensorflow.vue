@@ -1,7 +1,9 @@
 <template>
   <div>
     <!-- Modal for camera -->
-    <modal name="cameraModal"> </modal>
+    <modal name="cameraModal">
+      <Camera v-on:takePicture="takePicture" />
+    </modal>
 
     <!-- end of Modal -->
     <h2>Input Data</h2>
@@ -47,6 +49,7 @@
 <script>
 import * as tf from '@tensorflow/tfjs'
 import 'vuejs-noty/dist/vuejs-noty.css'
+import Camera from './Camera'
 
 export default {
   name: 'Tensorflow',
@@ -55,6 +58,9 @@ export default {
       modelReady: false,
       notReady: true
     }
+  },
+  components: {
+    Camera
   },
   mounted() {
     let that = this
@@ -159,7 +165,10 @@ export default {
       this.notReady = true
     },
     openModal() {
-      this.$modal.show('cameraModal')
+      this.$modal.show('cameraModal', { height: '100%' })
+    },
+    takePicture() {
+      console.log('test')
     }
   }
 }
