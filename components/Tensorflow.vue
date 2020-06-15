@@ -26,6 +26,7 @@
     <p id="prediction">This is prediction</p>
 
     <button class="btn btn-primary" :disabled="notReady" @click="predict">Predict</button>
+    <button class="btn btn-danger" @click="reset">Reset</button>
   </div>
 </template>
 
@@ -135,6 +136,13 @@ export default {
 
       // Return the best probability label
       document.querySelector('#prediction').innerText = `${labelName}`
+    },
+    reset() {
+      document.querySelector('#prediction').innerText = `This is prediction`
+      document
+        .querySelector('#uploadedImage')
+        .setAttribute('src', '../assets/MASK detector.png')
+      this.notReady = true
     }
   }
 }
