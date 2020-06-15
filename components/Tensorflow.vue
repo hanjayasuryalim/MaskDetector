@@ -1,9 +1,7 @@
 <template>
   <div>
     <!-- Modal for camera -->
-    <modal name="cameraModal">
-      Hello
-    </modal>
+    <modal name="cameraModal"> </modal>
 
     <!-- end of Modal -->
     <h2>Input Data</h2>

@@ -35,4 +35,4 @@ vendor: ['@tensorflow/tjfs]
 
 npm install vuejs-noty
 npm install vue-js-modal
-npm install vue-web-cam
+npm install vue-webcam
