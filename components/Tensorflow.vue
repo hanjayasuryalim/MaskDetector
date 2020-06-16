@@ -54,7 +54,7 @@ export default {
     Camera
   },
   mounted() {
-    this.$modal.hide('cameraModal')
+    this.closeModal()
     let that = this
 
     async function loadModel() {
@@ -172,6 +172,9 @@ export default {
       const upImg = document.querySelector('#uploadedImage')
       upImg.setAttribute('src', dataURL)
       this.notReady = false
+    },
+    closeModal() {
+      this.$modal.hide('cameraModal')
     }
   }
 }
