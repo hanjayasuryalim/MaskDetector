@@ -36,3 +36,10 @@ vendor: ['@tensorflow/tjfs]
 npm install vuejs-noty
 npm install vue-js-modal
 npm install vue-webcam
+
+# Deploy to firebase
+
+npm install
+npm run generate
+npm run build
+firebase deploy

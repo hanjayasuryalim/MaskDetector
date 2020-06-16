@@ -21,27 +21,18 @@
           aria-describedby="inputGroupFileAddon01"
           @change="readURL"
         />
-        <label class="custom-file-label" for="inputGroupFile01"
-          >Choose file</label
-        >
+        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
       </div>
       <button class="btn btn-secondary" @click="openModal">Take a photo</button>
     </div>
-    <img
-      id="uploadedImage"
-      alt="img"
-      src="../assets/MASK detector.png"
-      class="myImage"
-    />
+    <img id="uploadedImage" alt="img" src="../assets/MASK detector.png" class="myImage" />
     <br />
     <br />
     <br />
     <h2>Prediction</h2>
     <p id="prediction">This is prediction</p>
 
-    <button class="btn btn-primary" :disabled="notReady" @click="predict">
-      Predict
-    </button>
+    <button class="btn btn-primary" :disabled="notReady" @click="predict">Predict</button>
     <button class="btn btn-danger" @click="reset">Reset</button>
   </div>
 </template>
@@ -63,6 +54,7 @@ export default {
     Camera
   },
   mounted() {
+    this.$modal.hide('cameraModal')
     let that = this
 
     async function loadModel() {
