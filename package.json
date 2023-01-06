@@ -17,7 +17,7 @@
     "bootstrap-vue": "^2.0.0",
     "cross-env": "^7.0.2",
     "fs": "0.0.1-security",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "vue-js-modal": "^2.0.0-rc.3",
     "vuejs-noty": "^0.1.3"
   },
